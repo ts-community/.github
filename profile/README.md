@@ -1,14 +1,14 @@
 <div align="center">
 
-# 🎮 TS Community Brawl
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:5865F2,100:8B5CF6&height=200&section=header&text=TS%20Community%20Brawl&fontSize=46&fontColor=ffffff&fontAlignY=38" alt="TS Community Brawl" width="100%" />
 
-*Comunidad y plataforma española dedicada al entorno competitivo y social de **Brawl Stars**.*
+<img src="https://github.com/ts-community.png" alt="Logo de TS Community Brawl" width="120" />
 
-[
+<p><i>Comunidad y plataforma española dedicada al entorno competitivo y social de <b>Brawl Stars</b>.</i></p>
 
-![Discord](https://img.shields.io/badge/Discord-Unirse%20a%20la%20comunidad-5865F2?style=for-the-badge&logo=discord&logoColor=white)
-
-](https://discord.gg/8nu3ZdDkp7)
+<a href="https://discord.gg/8nu3ZdDkp7">
+  <img src="https://img.shields.io/badge/Discord-Unirse%20a%20la%20comunidad-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Unirse al Discord" />
+</a>
 
 </div>
 
@@ -34,4 +34,6 @@ Nuestros proyectos evolucionan de forma continua, priorizando:
 
 La actividad de TS Community Brawl se centraliza en **Discord**, donde tienen lugar la comunicación, la participación y la gestión de los servicios de la comunidad.
 
-👉 **[Únete a TS Community Brawl en Discord](https://discord.gg/8nu3ZdDkp7)**
+**[Únete a TS Community Brawl en Discord](https://discord.gg/8nu3ZdDkp7)**
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B5CF6,100:5865F2&height=100&section=footer" alt="" width="100%" />
