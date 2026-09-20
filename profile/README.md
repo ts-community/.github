@@ -5,21 +5,69 @@
     alt="TS Community Brawl"
   />
 </p><h1 align="center">TS Community Brawl</h1><p align="center">
-  <b>Comunidad española de Discord</b><br>
-  Desarrollo de sistemas, herramientas y servicios para la comunidad.
+  <b>Comunidad española de Brawl Stars</b><br>
+  Gestión, competición y desarrollo de sistemas propios para la comunidad.
 </p><p align="center">
   <a href="https://discord.gg/8nu3ZdDkp7">
     <img
-      src="https://img.shields.io/discord/1093864130030612521?style=flat&logo=discord&logoColor=white&label=TS%20Community"
-      alt="TS Community Discord"
+      src="https://img.shields.io/discord/1093864130030612521?style=flat&logo=discord&logoColor=white&label=Discord"
+      alt="Discord"
     />
   </a>
 </p>---
 
-Sobre TS Community
+👋 Sobre TS Community Brawl
 
-TS Community es una comunidad española cuya actividad se desarrolla principalmente a través de Discord. La organización cuenta con sistemas propios destinados a la gestión, automatización y organización de sus diferentes actividades.
+TS Community Brawl es una comunidad española centrada en Brawl Stars, cuya actividad se desarrolla principalmente a través de Discord.
 
+La organización ofrece diferentes sistemas y servicios destinados a facilitar la gestión de la comunidad, la participación de sus miembros y la organización de actividades competitivas.
+
+---
+
+⚙️ Sistemas
+
+La organización desarrolla y mantiene diferentes sistemas propios, cada uno orientado a una función específica dentro de la comunidad.
+
+🔧 TS-Manager
+
+Sistema destinado a la gestión y administración de la comunidad.
+
+Incluye herramientas para moderación, gestión de clubes, tickets y servicios, postulaciones, starboard y otras funciones internas.
+
+🏆 TS-League
+
+Sistema destinado a la organización y automatización de competiciones.
+
+Permite gestionar equipos, jugadores, divisiones, jornadas, partidos, clasificaciones y otros procesos relacionados con la competición.
+
+⭐ TS-Levelling
+
+Sistema destinado a la progresión y reconocimiento de la actividad de los miembros.
+
+Gestiona experiencia, niveles y recompensas vinculadas a la participación de los usuarios dentro de la comunidad.
+
+---
+
+🛠️ Desarrollo
+
+Los sistemas de TS Community Brawl se desarrollan y mantienen de forma independiente, adaptándose a las necesidades de la comunidad.
+
+La organización centraliza estos proyectos para facilitar su mantenimiento, evolución y coordinación, manteniendo una estructura común para los diferentes servicios.
+
+---
+
+🌐 Comunidad
+
+La actividad, comunicación y gestión de TS Community Brawl se desarrollan principalmente a través de Discord.
+
+<p align="center">
+  <a href="https://discord.gg/8nu3ZdDkp7">
+    <img
+      src="https://img.shields.io/badge/Discord-TS%20Community%20Brawl-5865F2?style=flat&logo=discord&logoColor=white"
+      alt="TS Community Brawl en Discord"
+    />
+  </a>
+</p>
 La organización reúne los proyectos utilizados para proporcionar estas funcionalidades y centralizar su desarrollo y mantenimiento.
 
 Proyectos
