@@ -36,27 +36,10 @@ Desarrollamos y mantenemos **sistemas propios** para cubrir las necesidades de l
 - ⚙️ **Automatización**
 - 📈 **Mejora de los servicios** para nuestros miembros
 
-
-
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-
-
-
-
-![discord.js](https://img.shields.io/badge/discord.js-5865F2?style=flat-square&logo=discord&logoColor=white)
-
-
-
 📂 Puedes ver nuestros proyectos en la pestaña de [repositorios](https://github.com/ts-community?tab=repositories).
 
 ## 🌐 Comunidad
 
 La actividad se centraliza en **Discord**, donde tienen lugar la comunicación, la participación y la gestión de los servicios.
 
-👉 **[Únete a TS Community Brawl en Discord](https://discord.gg/8nu3ZdDkp7)**
-
----
-
-<div align="center">
-  <sub>Hecho con ☕, código y demasiadas partidas de Brawl. GG. 🤝</sub>
-</div>
+**[Únete a TS Community Brawl en Discord](https://discord.gg/8nu3ZdDkp7)**
