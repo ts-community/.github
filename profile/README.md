@@ -1,10 +1,12 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:5865F2,100:8B5CF6&height=200&section=header&text=TS%20Community%20Brawl&fontSize=46&fontColor=ffffff&fontAlignY=38" alt="TS Community Brawl" width="100%" />
+<img src="https://raw.githubusercontent.com/ts-community/.github/main/profile/logo-TS.png" alt="Logo de TS Community Brawl" width="160" />
 
-<img src="https://github.com/ts-community.png" alt="Logo de TS Community Brawl" width="120" />
+# TS Community Brawl
 
-<p><i>Comunidad y plataforma española dedicada al entorno competitivo y social de <b>Brawl Stars</b>.</i></p>
+*Comunidad y plataforma española dedicada al entorno competitivo y social de **Brawl Stars**.*
+
+<br />
 
 <a href="https://discord.gg/8nu3ZdDkp7">
   <img src="https://img.shields.io/badge/Discord-Unirse%20a%20la%20comunidad-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Unirse al Discord" />
@@ -18,22 +20,43 @@
 
 **TS Community Brawl** es una comunidad española dedicada a *Brawl Stars*, con una estructura orientada a la **organización**, la **participación** y el **desarrollo de servicios propios**.
 
-Nuestro objetivo es ofrecer un entorno organizado en el que la comunidad pueda participar en actividades y servicios, tanto **sociales** como **competitivos**.
+Nuestro objetivo es ofrecer un entorno organizado en el que puedas participar en actividades y servicios, tanto **sociales** como **competitivos**.
+
+## ✨ Qué encontrarás
+
+- 🏆 **Competitivo:** liga y actividades para los que buscan reto
+- 💬 **Social:** un sitio donde charlar, jugar y compartir partidas
+- 🤖 **Bot propio:** niveles, logros, economía, counting y Starboard
 
 ## 🛠️ Desarrollo
 
-Desarrollamos y mantenemos **sistemas propios** pensados para cubrir las necesidades de la comunidad.
-
-Nuestros proyectos evolucionan de forma continua, priorizando:
+Desarrollamos y mantenemos **sistemas propios** para cubrir las necesidades de la comunidad, y evolucionan de forma continua priorizando:
 
 - 🗂️ **Organización**
 - ⚙️ **Automatización**
 - 📈 **Mejora de los servicios** para nuestros miembros
 
+
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+
+
+
+
+![discord.js](https://img.shields.io/badge/discord.js-5865F2?style=flat-square&logo=discord&logoColor=white)
+
+
+
+📂 Puedes ver nuestros proyectos en la pestaña de [repositorios](https://github.com/ts-community?tab=repositories).
+
 ## 🌐 Comunidad
 
-La actividad de TS Community Brawl se centraliza en **Discord**, donde tienen lugar la comunicación, la participación y la gestión de los servicios de la comunidad.
+La actividad se centraliza en **Discord**, donde tienen lugar la comunicación, la participación y la gestión de los servicios.
 
-**[Únete a TS Community Brawl en Discord](https://discord.gg/8nu3ZdDkp7)**
+👉 **[Únete a TS Community Brawl en Discord](https://discord.gg/8nu3ZdDkp7)**
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B5CF6,100:5865F2&height=100&section=footer" alt="" width="100%" />
+---
+
+<div align="center">
+  <sub>Hecho con ☕, código y demasiadas partidas de Brawl. GG. 🤝</sub>
+</div>
