@@ -1,25 +1,37 @@
+<div align="center">
+
 # 🎮 TS Community Brawl
 
-Comunidad y plataforma española dedicada al entorno competitivo y social de Brawl Stars.
+*Comunidad y plataforma española dedicada al entorno competitivo y social de **Brawl Stars**.*
 
-👋 Sobre nosotros
+[
 
-TS Community Brawl es una comunidad española dedicada a Brawl Stars, con una estructura orientada a la organización de actividades, participación de miembros y desarrollo de servicios propios.
+![Discord](https://img.shields.io/badge/Discord-Unirse%20a%20la%20comunidad-5865F2?style=for-the-badge&logo=discord&logoColor=white)
 
-El proyecto combina la gestión de la comunidad, la organización competitiva y el desarrollo de herramientas para ofrecer una experiencia centralizada a sus miembros.
+](https://discord.gg/8nu3ZdDkp7)
 
-🛠️ Desarrollo
+</div>
 
-La organización desarrolla y mantiene sistemas propios destinados a cubrir las diferentes necesidades de la comunidad.
+---
 
-Estos sistemas evolucionan de forma continua para mejorar la gestión, automatización y organización de sus servicios.
+## 👋 Sobre nosotros
 
-🌐 Comunidad
+**TS Community Brawl** es una comunidad española dedicada a *Brawl Stars*, con una estructura orientada a la **organización**, la **participación** y el **desarrollo de servicios propios**.
 
-La actividad de TS Community Brawl se desarrolla principalmente a través de Discord, donde se centralizan la comunicación, participación y servicios de la comunidad.
+Nuestro objetivo es ofrecer un entorno organizado en el que la comunidad pueda participar en actividades y servicios, tanto **sociales** como **competitivos**.
 
-<p align="center">
-  <a href="https://discord.gg/8nu3ZdDkp7">
-    <img src="https://img.shields.io/badge/Discord-TS%20Community%20Brawl-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord">
-  </a>
-</p>
+## 🛠️ Desarrollo
+
+Desarrollamos y mantenemos **sistemas propios** pensados para cubrir las necesidades de la comunidad.
+
+Nuestros proyectos evolucionan de forma continua, priorizando:
+
+- 🗂️ **Organización**
+- ⚙️ **Automatización**
+- 📈 **Mejora de los servicios** para nuestros miembros
+
+## 🌐 Comunidad
+
+La actividad de TS Community Brawl se centraliza en **Discord**, donde tienen lugar la comunicación, la participación y la gestión de los servicios de la comunidad.
+
+👉 **[Únete a TS Community Brawl en Discord](https://discord.gg/8nu3ZdDkp7)**
