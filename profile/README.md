@@ -6,8 +6,6 @@
   />
 </p>
 
-<h1 align="center">TS Community Brawl</h1>
-
 <p align="center">
   Comunidad española de <strong>Brawl Stars</strong> en Discord.<br />
   Jugamos, competimos y creamos nuestras propias herramientas y bots.
