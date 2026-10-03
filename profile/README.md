@@ -1,7 +1,7 @@
 <p align="center">
   <img
-    src="./banner.svg"
-    width="100%"
+    src="./logo-TS.png"
+    width="220"
     alt="TS Community Brawl"
   />
 </p>
@@ -35,25 +35,17 @@ Si juegas a Brawl Stars y buscas club, gente activa y un servidor bien organizad
 
 <h2 align="center">🛠️ Proyectos</h2>
 
-<p align="center">
-  <a href="https://github.com/ts-community/TS-Levelling"><b>TS-Levelling</b></a>
-  ·
-  <a href="https://github.com/ts-community/TS-Manager"><b>TS-Manager</b></a>
-  ·
-  <a href="https://github.com/ts-community/TS-League"><b>TS-League</b></a>
-  <br />
-  <sub>Bots y herramientas hechos por y para la comunidad</sub>
-</p>
+| Proyecto | Qué incluye |
+|---|---|
+| **[TS-Levelling](https://github.com/ts-community/TS-Levelling)** | - Niveles y XP por actividad<br>- Rangos de Brawl Stars con roles de Discord<br>- Tarjeta `/rank` y clasificación `/top`<br>- 42 records con recompensa de XP (5 ocultos)<br>- Avisos de subida de rango y adelantamientos |
+| **[TS-Manager](https://github.com/ts-community/TS-Manager)** | - Gestión de clubes con panel autoactualizado<br>- Tickets de servicios por fases<br>- Starboard y postulaciones<br>- Comandos de moderación |
+| **[TS-League](https://github.com/ts-community/TS-League)** | - Gestión de ligas competitivas<br>- Automatización para el servidor |
 
 <h2 align="center">📊 GitHub</h2>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ts-community/.github/main/profile/stats.svg" width="467" alt="Estadísticas de GitHub de TS Community" />
   <img src="https://raw.githubusercontent.com/ts-community/.github/main/profile/languages.svg" width="300" alt="Lenguajes más usados en TS Community" />
-</p>
-
-<p align="center">
-  <sub>Cuadros automáticos de GitHub: actividad de la organización y lenguajes más usados en nuestros repos.</sub>
 </p>
 
 <h2 align="center">📫 Contacto</h2>
