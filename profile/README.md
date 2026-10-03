@@ -1,11 +1,3 @@
-<p align="center">
-  <img
-    src="./banner.svg"
-    width="100%"
-    alt="TS Community Brawl"
-  />
-</p>
-
 <h1 align="center">TS Community Brawl</h1>
 
 <p align="center">
@@ -46,16 +38,19 @@ Entra en cada repositorio para ver sus comandos, instalación y uso.
 ## GitHub
 
 <p align="center">
-  <img src="./stats.svg" width="467" alt="Estadísticas de GitHub de TS Community" />
+  <img src="https://raw.githubusercontent.com/ts-community/.github/main/profile/stats.svg" width="467" alt="Estadísticas de GitHub de TS Community" />
+  <img src="https://raw.githubusercontent.com/ts-community/.github/main/profile/languages.svg" width="300" alt="Lenguajes más usados en TS Community" />
 </p>
 
-> Nuestros repositorios están hechos sobre todo en **JavaScript y TypeScript** (bots de Discord con Node.js y Discord.js).
+> Cuadros automáticos de GitHub: el primero resume estrellas, pull requests, issues y forks de la organización, y el segundo los lenguajes más usados en nuestros repos.
 
 ## Contacto
 
-- 💬 Discord: [únete a TS Community Brawl](https://discord.gg/8nu3ZdDkp7)
-- ✉️ Email: [tscommunitybrawl@gmail.com](mailto:tscommunitybrawl@gmail.com)
-
 <p align="center">
-  <sub>TS Community Brawl — 2026</sub>
+  <a href="https://discord.gg/8nu3ZdDkp7">
+    <img src="https://img.shields.io/badge/Discord-TS%20Community%20Brawl-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
+  </a>
+  <a href="mailto:tscommunitybrawl@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-tscommunitybrawl@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
+  </a>
 </p>
