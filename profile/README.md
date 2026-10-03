@@ -1,7 +1,7 @@
 <p align="center">
   <img
-    src="./logo-TS.png"
-    width="220"
+    src="./banner.svg"
+    width="100%"
     alt="TS Community Brawl"
   />
 </p>
@@ -35,11 +35,13 @@ Si juegas a Brawl Stars y buscas club, gente activa y un servidor bien organizad
 
 <h2 align="center">🛠️ Proyectos</h2>
 
-| Proyecto | Qué incluye |
-|---|---|
-| **[TS-Levelling](https://github.com/ts-community/TS-Levelling)** | - Niveles y XP por actividad<br>- Rangos de Brawl Stars con roles de Discord<br>- Tarjeta `/rank` y clasificación `/top`<br>- 42 records con recompensa de XP (5 ocultos)<br>- Avisos de subida de rango y adelantamientos |
-| **[TS-Manager](https://github.com/ts-community/TS-Manager)** | - Gestión de clubes con panel autoactualizado<br>- Tickets de servicios por fases<br>- Starboard y postulaciones<br>- Comandos de moderación |
-| **[TS-League](https://github.com/ts-community/TS-League)** | - Gestión de ligas competitivas<br>- Automatización para el servidor |
+| **[TS-Levelling](https://github.com/ts-community/TS-Levelling)** | **[TS-Manager](https://github.com/ts-community/TS-Manager)** | **[TS-League](https://github.com/ts-community/TS-League)** |
+|---|---|---|
+| **•** Niveles y XP por actividad | **•** Gestión de clubes y panel autoactualizado | **•** Gestión de ligas competitivas |
+| **•** Rangos de Brawl Stars con roles | **•** Tickets de servicios por fases | **•** Automatización para el servidor |
+| **•** Tarjeta `/rank` y clasificación `/top` | **•** Starboard y postulaciones |  |
+| **•** 42 records con XP (5 ocultos) | **•** Comandos de moderación |  |
+| **•** Avisos de rango y adelantamientos |  |  |
 
 <h2 align="center">📊 GitHub</h2>
 
