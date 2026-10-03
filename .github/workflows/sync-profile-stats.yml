@@ -1,0 +1,193 @@
+name: Sync profile statistics
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Generate profile statistics
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node <<'NODE'
+          const fs = require("node:fs");
+
+          const org = "ts-community";
+          const headers = {
+            Accept: "application/vnd.github+json",
+            Authorization: `Bearer ${process.env.GH_TOKEN}`,
+            "X-GitHub-Api-Version": "2022-11-28",
+            "User-Agent": "ts-community-profile-stats",
+          };
+
+          async function github(path) {
+            const response = await fetch(`https://api.github.com${path}`, { headers });
+            if (!response.ok) {
+              throw new Error(`GitHub API ${response.status}: ${await response.text()}`);
+            }
+            return response.json();
+          }
+
+          function esc(value) {
+            return String(value)
+              .replaceAll("&", "&amp;")
+              .replaceAll("<", "&lt;")
+              .replaceAll(">", "&gt;")
+              .replaceAll('"', "&quot;");
+          }
+
+          function statsSvg(stats) {
+            const value = (key) => stats[key] ?? "—";
+            const rows = [
+              ["#", "M58 8a.75.75 0 011.5 0v2.75H62a.75.75 0 010 1.5h-2.5v3a.75.75 0 01-1.5 0v-3H55.5a.75.75 0 010-1.5H58V8z", "Total Stars Earned:", value("stars")],
+              ["M", "M7.75 2a.75.75 0 01.75.75v4.5a.75.75 0 01-.75.75H3.5l-2 2V3.5A1.5 1.5 0 013 2h4.75z", "Total Commits:", value("commits")],
+              ["P", "M3 2.5h8.5A2.5 2.5 0 0114 5v4.5A2.5 2.5 0 0111.5 12H8.25L5 14v-2H3A2.5 2.5 0 01.5 9.5V5A2.5 2.5 0 013 2.5z", "Total PRs:", value("pull_requests")],
+              ["I", "M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z", "Total Issues:", value("issues")],
+              ["F", "M3 2h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3a1 1 0 011-1z", "Total Forks:", value("forks")],
+            ];
+
+            let body = "";
+            rows.forEach((row, i) => {
+              const y = 48 + i * 22;
+              body += `
+                <g class="stagger" style="animation-delay:${450 + i * 150}ms" transform="translate(25 ${y})">
+                  <path class="icon" d="${row[1]}" transform="scale(.75)"/>
+                  <text class="stat bold" x="25" y="12">${esc(row[2])}</text>
+                  <text class="stat bold" x="224" y="12">${esc(row[3])}</text>
+                </g>`;
+            });
+
+            return `<svg width="467" height="165" viewBox="0 0 467 165" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titleId descId">
+              <title id="titleId">TS Community's GitHub Stats</title>
+              <desc id="descId">Stars: ${esc(stats.stars)}, commits: ${esc(stats.commits)}, pull requests: ${esc(stats.pull_requests)}, issues: ${esc(stats.issues)}, forks: ${esc(stats.forks)}</desc>
+              <style>.header{font:600 18px 'Segoe UI',Ubuntu,Sans-Serif;fill:#A981FF}.stat{font:600 14px 'Segoe UI',Ubuntu,'Helvetica Neue',Sans-Serif;fill:#C3D1D9}.bold{font-weight:700}.icon{fill:#8F62FF}.stagger{opacity:0;animation:fade .3s ease-in-out forwards}.rim{stroke:#8F62FF;fill:none;stroke-width:6;opacity:.18}.arc{stroke:#A981FF;fill:none;stroke-width:6;stroke-linecap:round;stroke-dasharray:251;animation:draw 1s ease-out forwards}.dot{fill:#BFA7FF;animation:pulse 2.8s ease-in-out infinite}@keyframes fade{from{opacity:0}to{opacity:1}}@keyframes draw{from{stroke-dashoffset:251}to{stroke-dashoffset:63}}@keyframes pulse{0%,100%{opacity:.2;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}</style>
+              <rect x=".5" y=".5" width="466" height="164" rx="5" fill="#0D1117"/>
+              <text class="header" x="25" y="35">TS Community's GitHub Stats</text>
+              ${body}
+              <g transform="translate(390 53)">
+                <circle class="rim" cx="-10" cy="8" r="40"/>
+                <circle class="arc" cx="-10" cy="8" r="40" transform="rotate(-90 -10 8)"/>
+                <text x="-10" y="14" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="800" fill="#C3D1D9">TS</text>
+                <circle class="dot" cx="-10" cy="-32" r="2.4"/>
+              </g>
+            </svg>`;
+          }
+
+          function languagesSvg(languages, repos) {
+            const shown = languages.slice(0, 4);
+            const totalWidth = 250;
+            let x = 0;
+            let bars = "";
+            for (const lang of shown) {
+              const width = totalWidth * lang.percent / 100;
+              bars += `<rect class="bar" x="${x.toFixed(2)}" y="0" width="${width.toFixed(2)}" height="8" fill="${esc(lang.color)}"/>`;
+              x += width;
+            }
+
+            let items = "";
+            shown.forEach((lang, i) => {
+              const col = i % 2;
+              const row = Math.floor(i / 2);
+              items += `<g class="stagger" style="animation-delay:${450 + i * 150}ms" transform="translate(${col ? 150 : 0} ${row * 32})"><circle cx="5" cy="32" r="5" fill="${esc(lang.color)}"/><text class="name" x="15" y="36">${esc(lang.name)} · ${lang.percent.toFixed(1)}%</text></g>`;
+            });
+
+            return `<svg width="300" height="165" viewBox="0 0 300 165" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titleId descId">
+              <title id="titleId">Most Used Languages</title>
+              <desc id="descId">Languages across TS Community repositories</desc>
+              <style>.header{font:600 18px 'Segoe UI',Ubuntu,Sans-Serif;fill:#A981FF}.name{font:400 11px 'Segoe UI',Ubuntu,Sans-Serif;fill:#C3D1D9}.stagger{opacity:0;animation:fade .35s ease-in-out forwards}.bar{animation:grow .9s ease-in-out forwards;transform-origin:left}@keyframes fade{from{opacity:0}to{opacity:1}}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}</style>
+              <rect x=".5" y=".5" width="299" height="164" rx="5" fill="#0D1117"/>
+              <text class="header" x="25" y="35">Most Used Languages</text>
+              <g transform="translate(25 55)"><rect x="0" y="0" width="250" height="8" rx="4" fill="#30363D"/>${bars}${items}</g>
+            </svg>`;
+          }
+
+          (async () => {
+            const repos = await github(`/orgs/${org}/repos?per_page=100&type=all`);
+            const projects = repos.filter((repo) => repo.name !== ".github" && !repo.archived);
+
+            let stars = 0;
+            let forks = 0;
+            let issues = 0;
+            const languageBytes = {};
+
+            for (const repo of projects) {
+              stars += repo.stargazers_count;
+              forks += repo.forks_count;
+              issues += repo.open_issues_count;
+
+              const langs = await github(`/repos/${org}/${repo.name}/languages`);
+              for (const [name, bytes] of Object.entries(langs)) {
+                languageBytes[name] = (languageBytes[name] || 0) + bytes;
+              }
+            }
+
+            const commitsSearch = await github(`/search/commits?q=org:${org}&per_page=1`);
+            const prsSearch = await github(`/search/issues?q=org:${org}+type:pr&per_page=1`);
+            const issuesSearch = await github(`/search/issues?q=org:${org}+type:issue&per_page=1`);
+
+            const langColors = {
+              JavaScript: "#F1E05A",
+              TypeScript: "#3178C6",
+              Python: "#3572A5",
+              HTML: "#E34C26",
+              CSS: "#563D7C",
+              Java: "#B07219",
+              Shell: "#89E051",
+              JSON: "#292929"
+            };
+
+            const languageTotal = Object.values(languageBytes).reduce((a, b) => a + b, 0);
+            const languages = Object.entries(languageBytes)
+              .sort((a, b) => b[1] - a[1])
+              .slice(0, 6)
+              .map(([name, bytes]) => ({
+                name,
+                percent: languageTotal ? bytes / languageTotal * 100 : 0,
+                color: langColors[name] || "#8B949E",
+              }));
+
+            const stats = {
+              repositories: projects.length,
+              stars,
+              forks,
+              commits: commitsSearch.total_count ?? null,
+              pull_requests: prsSearch.total_count ?? 0,
+              issues: issuesSearch.total_count ?? 0,
+              languages,
+            };
+
+            fs.writeFileSync("profile/stats.json", JSON.stringify(stats, null, 2) + "\n");
+            fs.writeFileSync("profile/stats.svg", statsSvg(stats));
+            fs.writeFileSync("profile/languages.svg", languagesSvg(languages, projects.length));
+
+            console.log(JSON.stringify(stats, null, 2));
+          })().catch((error) => {
+            console.error(error);
+            process.exit(1);
+          });
+          NODE
+
+      - name: Commit updated statistics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- profile/stats.json profile/stats.svg profile/languages.svg; then
+            echo "Statistics are already up to date."
+            exit 0
+          fi
+
+          git add profile/stats.json profile/stats.svg profile/languages.svg
+          git commit -m "chore: update profile statistics"
+          git push

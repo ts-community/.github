@@ -1,0 +1,12 @@
+{
+  "repositories": 3,
+  "stars": 7,
+  "forks": 1,
+  "commits": null,
+  "pull_requests": 0,
+  "issues": 0,
+  "languages": [
+    {"name": "JavaScript", "percent": 66.7, "color": "#F1E05A"},
+    {"name": "TypeScript", "percent": 33.3, "color": "#3178C6"}
+  ]
+}
