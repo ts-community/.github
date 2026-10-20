@@ -2,33 +2,33 @@
   "repositories": 4,
   "stars": 12,
   "forks": 1,
-  "commits": 365,
+  "commits": 369,
   "pull_requests": 0,
   "issues": 0,
   "languages": [
     {
       "name": "JavaScript",
-      "percent": 70.14151636598227,
+      "percent": 68.29032437990475,
       "color": "#F1E05A"
     },
     {
       "name": "TypeScript",
-      "percent": 13.868740861776507,
+      "percent": 16.141938034125854,
       "color": "#3178C6"
     },
     {
       "name": "HTML",
-      "percent": 12.429976611129517,
+      "percent": 12.101921640524207,
       "color": "#E34C26"
     },
     {
       "name": "CSS",
-      "percent": 2.683679848956219,
+      "percent": 2.6128515166506614,
       "color": "#563D7C"
     },
     {
       "name": "Python",
-      "percent": 0.8760863121554875,
+      "percent": 0.8529644287945368,
       "color": "#3572A5"
     }
   ]
